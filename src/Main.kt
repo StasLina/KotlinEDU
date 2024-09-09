@@ -3,7 +3,7 @@ import Task0.Task0
 import Task2.Task2
 
 class TaskManager : ITask {
-    public override fun Run() {
+    public override fun run() {
 
         while (true) {
             println("Введите цифру обозначающую № задания")
@@ -27,7 +27,7 @@ class TaskManager : ITask {
                     else -> println("Я вас не понимаю")
                 }
             if (instanceTask != null) {
-                instanceTask.Run()
+                instanceTask.run()
             }
         }
     }
@@ -35,5 +35,5 @@ class TaskManager : ITask {
 
 fun main(args: Array<String>) {
     val taskManager : ITask = TaskManager()
-    taskManager.Run()
+    taskManager.run()
 }

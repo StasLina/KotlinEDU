@@ -1,6 +1,7 @@
 package Task0
+import  CommonInterfaces.ITask
 
-class Task0 {
+class Task0 : ITask{
     private fun variant1(): Int {
         // Ввод числа с клавиатуры
         print("Введите целое положительное число: ")
@@ -25,6 +26,7 @@ class Task0 {
             println("Ошибка: Введите корректное целое положительное число.")
             return 1;
         }
+
         return 0;
     }
 
@@ -89,12 +91,13 @@ class Task0 {
         return 0
     }
 
-    public fun Run(){
+    public override fun Run(){
         while(true){
             println("Введите цифру обозначающую тематику приложения")
             println("1 - Счёт суммы крайних цифр числа")
             println("2 - Счёт среднего числа из ввдённых")
             println("3 - Угодай число")
+            println("0 - Выход")
 
             val inputText = readln()
             if(inputText.isEmpty()){
@@ -106,7 +109,8 @@ class Task0 {
                 when (inputNumber) {
                     1 -> variant1()
                     2 -> variant2()
-                    3 ->  variant3()
+                    3 -> variant3()
+                    0 -> break;
                     else -> println("Я вас не понимаю")
                 }
         }

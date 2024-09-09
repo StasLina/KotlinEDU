@@ -5,6 +5,7 @@ import  CommonInterfaces.ITask
 import CommonUtils.ConsoleInput
 
 class Task3 : ITask {
+
     private fun sqr(n: Double): Double {
         return n * n
     }

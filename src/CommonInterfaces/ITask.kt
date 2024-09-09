@@ -1,5 +1,5 @@
 package CommonInterfaces
 
 interface ITask {
-        fun Run();
+        fun run();
 }

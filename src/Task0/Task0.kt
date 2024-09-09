@@ -91,7 +91,7 @@ class Task0 : ITask{
         return 0
     }
 
-    public override fun Run(){
+    public override fun run(){
         while(true){
             println("Введите цифру обозначающую тематику приложения")
             println("1 - Счёт суммы крайних цифр числа")

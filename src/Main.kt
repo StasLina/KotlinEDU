@@ -1,5 +1,6 @@
 import  CommonInterfaces.ITask
 import Task0.Task0
+import Task2.Task2
 
 class TaskManager : ITask {
     public override fun Run() {
@@ -13,6 +14,7 @@ class TaskManager : ITask {
             if (inputText.isEmpty()) {
                 continue
             }
+
             val inputNumber = inputText?.toInt()
 
             var instanceTask: ITask? = null
@@ -20,7 +22,7 @@ class TaskManager : ITask {
             if (inputNumber != null)
                 when (inputNumber) {
                     1 -> instanceTask = Task0()
-                    //2 -> variant2()
+                    2 -> instanceTask = Task2()
                     //3 ->  variant3()
                     else -> println("Я вас не понимаю")
                 }

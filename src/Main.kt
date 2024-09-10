@@ -5,6 +5,7 @@ import Task3.Task3
 import Task4.Task4
 import Task5.Task5
 import Task6.Task6
+import Task7.Task7
 
 class TaskManager : ITask {
     public override fun run() {
@@ -17,6 +18,7 @@ class TaskManager : ITask {
             println("4 - Высокий класс")
             println("5 - Наследование")
             println("6 - Серьёзно о полиморфизме")
+            println("7 - Работа с данными")
             println("0 - Выход")
 
             val inputText = readln()
@@ -36,6 +38,7 @@ class TaskManager : ITask {
                     4 ->  instanceTask = Task4()
                     5 ->  instanceTask = Task5()
                     6 ->  instanceTask = Task6()
+                    7 -> instanceTask = Task7()
                     0 -> return
 
                     else -> println("Я вас не понимаю")

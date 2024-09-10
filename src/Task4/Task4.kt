@@ -1,5 +1,6 @@
 package Task4
 
+import Task5.Task5
 import  CommonInterfaces.ITask
 
 class Task4 : ITask {
@@ -146,6 +147,7 @@ class Task4 : ITask {
                         println(Vector1 * Vector2);
                         println(scalar(Vector1, Vector2));
                     }
+
                     0 -> {
                         break;
                     }

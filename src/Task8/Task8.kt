@@ -1,7 +1,9 @@
 package Task8
 
 import java.util.Scanner
-class Task8 {
+import  CommonInterfaces.ITask
+
+class Task8 : ITask {
 
     private fun variant1() {
         val scanner = Scanner(System.`in`)
@@ -37,8 +39,32 @@ class Task8 {
         println("Результат: $result")
     }
 
-    private fun variant2(){
+    private fun variant2() {
+        while (true) {
+            println("Введите цифру обозначающую тематику приложения")
+            println("1 - оператор if")
+            println("2 - оператор безопасного вызова ?")
+            println("3 - функция let")
+            println("4 - Элвис-оператор ?: ")
+            println("0 - Выход")
 
+            val inputText = readln()
+            if (inputText.isEmpty()) {
+                continue
+            }
+            val inputNumber = inputText?.toInt()
+
+            if (inputNumber != null) {
+                when (inputNumber) {
+                    1 -> variant2_1()
+                    2 -> variant2_2()
+                    3 -> variant2_3()
+                    4 -> variant2_4()
+                    0 -> break;
+                    else -> println("Я вас не понимаю")
+                }
+            }
+        }
     }
 
     fun variant2_1() {
@@ -46,35 +72,61 @@ class Task8 {
 
         for (word in words) {
             if (word != null) {
-                println(word.toUpperCase())
+                println(word.uppercase())
             } else {
                 println("empty")
             }
         }
     }
+
     fun variant2_2() {
         val words: List<String?> = listOf("hello", null, "world", "kotlin", null)
 
         for (word in words) {
-            println(word?.toUpperCase() ?: "empty")
+            println(word?.uppercase() ?: "empty")
         }
     }
+
     fun variant2_3() {
         val words: List<String?> = listOf("hello", null, "world", "kotlin", null)
 
         for (word in words) {
             word?.let {
-                println(it.toUpperCase())
+                println(it.uppercase())
             } ?: println("empty")
         }
     }
+
     fun variant2_4() {
         val words: List<String?> = listOf("hello", null, "world", "kotlin", null)
 
         for (word in words) {
-            println((word ?: "empty").toUpperCase())
+            println((word ?: "empty").uppercase())
         }
     }
 
+    public override fun run() {
+        while (true) {
+            println("Введите цифру обозначающую тематику приложения")
+            println("1 - Калькулятор")
+            println("2 - Варианты перебора")
+            println("0 - Выход")
+
+            val inputText = readln()
+            if (inputText.isEmpty()) {
+                continue
+            }
+            val inputNumber = inputText?.toInt()
+
+            if (inputNumber != null) {
+                when (inputNumber) {
+                    1 -> variant1()
+                    2 -> variant2()
+                    0 -> break;
+                    else -> println("Я вас не понимаю")
+                }
+            }
+        }
+    }
 
 }

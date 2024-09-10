@@ -46,7 +46,7 @@ class Task3 : ITask {
     private fun variant1() {
         println("Введите число")
         val sqrtValue = ConsoleInput.readDoublePrompt()
-        println("Квадрат числа ${sqr(sqrtValue)}: ${sqr(sqrtValue)}")
+        println("Квадрат числа ${sqrtValue}: ${sqr(sqrtValue)}")
     }
 
     private fun variant2() {
@@ -82,7 +82,4 @@ class Task3 : ITask {
                 }
         }
     }
-
-
-
 }

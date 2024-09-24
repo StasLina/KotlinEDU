@@ -44,7 +44,7 @@ class TaskManager : ITask {
                     6 ->  instanceTask = Task6()
                     7 -> instanceTask = Task7()
                     8 -> instanceTask = Task8()
-                    8 -> instanceTask = Task9()
+                    9 -> instanceTask = Task9()
                     0 -> return
 
                     else -> println("Я вас не понимаю")
